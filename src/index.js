@@ -5,19 +5,20 @@ import App from './App';
 import banner from './img/stanford.png';
 import Grid from '@material-ui/core/Grid';
 import Menu from '@material-ui/core/Menu';
+import Button from '@material-ui/core/Button';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 //import reportWebVitals from './reportWebVitals';
 
 class Header extends React.Component {
    grid() {
     return (
-      <Grid>
-        <Grid item xs={2}>
-          <button className="home-button"> Stan4d </button>
-        </Grid>
-        <Grid item xs={2}>
+      <AppBar position="fixed">
+        <Toolbar color="red">
+          <Button className="home-button"> Stan4d </Button>
           <h3> Welcome to Stan4d </h3>
-        </Grid>
-      </Grid>
+        </Toolbar>
+      </AppBar>
     )
   }
 
@@ -27,7 +28,7 @@ class Header extends React.Component {
       <>
         <div className="banner">
           <div className="banner-box">
-
+            {this.grid()}
           </div>
         </div>
       </>
