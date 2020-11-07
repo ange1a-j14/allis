@@ -11,11 +11,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 //import reportWebVitals from './reportWebVitals';
 
 class Header extends React.Component {
-   grid() {
+
+   banner() {
     return (
-      <AppBar position="fixed">
+      <AppBar className="appbar" style={{background:"rgb(137,21,22)"}}>
         <Toolbar color="red">
-          <Button className="home-button"> Stan4d </Button>
+          <Button className="home-button" > Stan4d </Button>
           <h3> Welcome to Stan4d </h3>
         </Toolbar>
       </AppBar>
@@ -28,7 +29,7 @@ class Header extends React.Component {
       <>
         <div className="banner">
           <div className="banner-box">
-            {this.grid()}
+            {this.banner()}
           </div>
         </div>
       </>
